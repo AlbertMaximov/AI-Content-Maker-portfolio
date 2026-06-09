@@ -1,0 +1,8 @@
+{
+  "name": "Remix: AI Content Maker - portfolio",
+  "description": "AI Content Maker for IT Startup Online School",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
