@@ -10,10 +10,6 @@ RUN npm ci
 # Копируем исходный код
 COPY . .
 
-# Пробрасываем переменную окружения для Vite (требуется во время сборки для встраивания ключа)
-ARG VITE_GEMINI_API_KEY
-ENV VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY
-
 # Собираем клиентское приложение и бекенд
 RUN npm run build
 

@@ -4,15 +4,12 @@ services:
   ai-content-maker:
     build:
       context: .
-      args:
-        # Эта переменная попадет в сборку Vite (на фронтенд) для обращения к Gemini
-        - VITE_GEMINI_API_KEY=${VITE_GEMINI_API_KEY}
     image: ai-content-maker:latest
     ports:
       - "3004:3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
-      # Серверные ключи, если нужны (например, если логика будет перенесена на бэкенд)
-      - GEMINI_API_KEY=${VITE_GEMINI_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
     restart: unless-stopped

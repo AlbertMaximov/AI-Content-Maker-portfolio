@@ -27,9 +27,9 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen bg-[#f5f5f5] font-sans text-gray-900">
+    <div className="flex flex-col md:flex-row h-screen bg-[#f5f5f5] font-sans text-gray-900">
       {/* Left Sidebar */}
-      <aside className="w-72 bg-white border-r border-gray-200 flex flex-col z-10">
+      <aside className="w-full md:w-72 bg-white border-b md:border-b-0 md:border-r border-gray-200 flex flex-col z-10">
         <div className="p-6 border-b border-gray-100">
           <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
             <LayoutTemplate className="w-6 h-6 text-gray-900" />
@@ -64,7 +64,7 @@ export default function App() {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 overflow-hidden">
+      <main className="flex-1 overflow-y-auto">
         {renderContent()}
       </main>
     </div>

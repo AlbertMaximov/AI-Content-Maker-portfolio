@@ -129,9 +129,9 @@ export default function Newsletters() {
   };
 
   return (
-    <div className="flex h-full">
+    <div className="flex flex-col md:flex-row h-full">
       {/* Center Panel */}
-      <div className="w-1/2 p-4 overflow-y-auto border-r border-gray-200 bg-white">
+      <div className="w-full md:w-1/2 p-4 overflow-y-auto border-b md:border-b-0 md:border-r border-gray-200 bg-white">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Параметры рассылки</h2>
         
         <div className="space-y-4">
@@ -237,7 +237,7 @@ export default function Newsletters() {
       </div>
 
       {/* Right Panel */}
-      <div className="w-1/2 p-8 overflow-y-auto bg-[#f5f5f5]">
+      <div className="w-full md:w-1/2 p-8 overflow-y-auto bg-[#f5f5f5]">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-900">Результат</h2>
         </div>
